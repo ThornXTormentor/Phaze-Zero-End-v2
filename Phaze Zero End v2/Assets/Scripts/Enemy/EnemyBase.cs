@@ -10,7 +10,7 @@ public class EnemyBase : MonoBehaviour
     public void LookAtPlayer()
     {
         playerTransform = GameObject.FindWithTag("Player").transform;
-        Vector3 targetRotation = Vector3.Angle(playerTransform.position.x, transform.position.y, playerTransform.position.z);
-        transform.Rotate(targetRotation);
+        //float targetRotation = Vector3.Angle(playerTransform.position, playerTransform.position);
+        //transform.Rotate(targetRotation);
     }
 }

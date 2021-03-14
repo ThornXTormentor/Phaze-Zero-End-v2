@@ -55,6 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4902788223876618361
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +136,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -158,6 +161,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5723029418466237802
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +173,8 @@ GameObject:
   - component: {fileID: 4911061335363160016}
   - component: {fileID: 5302686495783801809}
   - component: {fileID: 97162668962766622}
+  - component: {fileID: 4521047966091364002}
+  - component: {fileID: 5769426308283964325}
   m_Layer: 0
   m_Name: ElevatorPlatform
   m_TagString: Untagged
@@ -185,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 5723029418466237802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -14.97, z: -0}
-  m_LocalScale: {x: 1.275, y: 1, z: 1.275}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_Children:
   - {fileID: 6508965934387236436}
   - {fileID: 3965609120475286020}
@@ -221,3 +227,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 0.33, z: 8}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &4521047966091364002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5723029418466237802}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 1, z: 8}
+  m_Center: {x: 0, y: 0.69, z: 0}
+--- !u!114 &5769426308283964325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5723029418466237802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4351166126b253f4e9f3591a71480c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevator: {fileID: 5723029418466237802}
+  topPos: {fileID: 0}
+  bottomPos: {fileID: 0}
+  smoothing: 1.75
