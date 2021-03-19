@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class XRSocketInteractorTag : XRSocketInteractor
 {
+    [SerializeField]
     public string targetTag;
 
     public override bool CanSelect(XRBaseInteractable interactable)
