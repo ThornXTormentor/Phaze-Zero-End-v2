@@ -25,15 +25,14 @@ public class SemiAutoRifle : MonoBehaviour
     {
         if (barrelLocation == null) barrelLocation = transform;
     }
-
-    // Update is called once per frame
+    
     public void TriggerPulled()
     {
         //Debug.Log("TriggerPulled Called");
         if (rifleMagazine && rifleMagazine.numberOfBullets > 0 && hasSlide)
         {
             //pistolAnimator.SetTrigger("Fire");
-            FirePistol();
+            FireRifle();
         }
         else
         {
@@ -42,7 +41,7 @@ public class SemiAutoRifle : MonoBehaviour
         }
     }
 
-    public void FirePistol()
+    public void FireRifle()
     {
         rifleMagazine.numberOfBullets--;
         GameObject spawnedBullet = Instantiate(bulletObj, barrelLocation.position, barrelLocation.rotation);
