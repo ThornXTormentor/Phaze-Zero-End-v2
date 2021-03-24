@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 425823116}
   m_Layer: 0
   m_Name: Magazine Socket
-  m_TagString: Untagged
+  m_TagString: SemiAutoPistolMag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -814,13 +814,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665579320}
-  m_LocalRotation: {x: -0.13052624, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -0, y: -0.118, z: 0.311}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
+  m_LocalPosition: {x: -0, y: -0.118, z: -0.31}
   m_LocalScale: {x: 0.2, y: 1, z: 0.35}
   m_Children: []
   m_Father: {fileID: 480026086}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!1001 &681603276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1301,7 +1301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005787757}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0.274, z: -2.137}
+  m_LocalPosition: {x: -0, y: 0.274, z: 2.267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2244742623699786983}
@@ -1838,7 +1838,7 @@ GameObject:
   - component: {fileID: 1769016622}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: SemiAutoRifleMag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2446,10 +2446,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrelLocation: {fileID: 0}
   rifleMagazine: {fileID: 2001437543}
-  socketInteractor: {fileID: 0}
+  socketInteractor: {fileID: 1769016622}
   muzzleFlash: {fileID: 0}
   bulletSpeed: 90
-  bulletObj: {fileID: 0}
+  bulletObj: {fileID: 390003366377744662, guid: ddeab401a39f2bf4d8a3f65c096b3318,
+    type: 3}
   audioSource: {fileID: 0}
   pistolShotAudio: {fileID: 0}
   triggerClickAudio: {fileID: 0}
@@ -3395,7 +3396,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.01
+    limit: 0.4
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -3424,8 +3425,8 @@ ConfigurableJoint:
   m_TargetVelocity: {x: 0, y: 0, z: 0}
   m_XDrive:
     serializedVersion: 3
-    positionSpring: 2000
-    positionDamper: 1000
+    positionSpring: 1000
+    positionDamper: 200
     maximumForce: 3.4028233e+38
   m_YDrive:
     serializedVersion: 3
@@ -3609,7 +3610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 0.02
-  target: {fileID: 0}
+  target: {fileID: 806039098}
   OnReached:
     m_PersistentCalls:
       m_Calls:
