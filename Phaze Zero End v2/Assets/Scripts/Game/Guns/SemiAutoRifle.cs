@@ -18,12 +18,31 @@ public class SemiAutoRifle : MonoBehaviour
     public AudioClip triggerClickAudio;
     public AudioClip magazineSlide;
     
-    private bool hasSlide = true;
+    private bool hasSlide;
     
     // Start is called before the first frame update
     void Start()
     {
         if (barrelLocation == null) barrelLocation = transform;
+
+        socketInteractor.onSelectEntered.AddListener(AddMagazine);
+        socketInteractor.onSelectExited.AddListener(RemoveMagazine);
+    }
+
+    public void AddMagazine(XRBaseInteractable interactable)
+    {
+        rifleMagazine = interactable.GetComponent<Magazine>();
+        hasSlide = false;
+    }
+
+    public void RemoveMagazine(XRBaseInteractable interactable)
+    {
+        rifleMagazine = null;
+    }
+
+    public void Slide()
+    {
+        hasSlide = true;
     }
     
     public void TriggerPulled()
