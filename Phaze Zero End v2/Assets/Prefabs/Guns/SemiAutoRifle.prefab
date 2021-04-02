@@ -353,7 +353,7 @@ MonoBehaviour:
   socketInteractor: {fileID: 3907591904317600422}
   muzzleFlash: {fileID: 0}
   bulletSpeed: 90
-  bulletObj: {fileID: 390003366377744662, guid: ddeab401a39f2bf4d8a3f65c096b3318,
+  bulletObj: {fileID: 2954532019582375388, guid: 09ebea3b4a9791949ade69007f6d134f,
     type: 3}
   audioSource: {fileID: 0}
   pistolShotAudio: {fileID: 0}

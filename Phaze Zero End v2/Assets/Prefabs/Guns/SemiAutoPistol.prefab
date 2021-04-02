@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 80
-  bulletObj: {fileID: 1877509569078177932, guid: cd6c02ff22ed27e4598f7e618dafe33a,
+  bulletObj: {fileID: 8397453819217095135, guid: bfb19ce9b5c3cba43bea52ec12c06d42,
     type: 3}
   barrel: {fileID: 4744031970138913954}
   audioSource: {fileID: 0}
