@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &59411158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2285375788807097942, guid: edac522ede49cf640b85cfe32a59f417,
+    type: 3}
+  m_PrefabInstance: {fileID: 2285375788912728014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &59411159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59411158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4c8b3d1d1157d4f8cb1ff55e10a7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &197146453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,6 +4348,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9c56f9d718b7b40bf9a271f7cdd1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDmg: 3
+  attackDmgV2: 6
+  isBoss: 0
+  attackCollider: {fileID: 0}
 --- !u!4 &8330758646505516670
 Transform:
   m_ObjectHideFlags: 0
