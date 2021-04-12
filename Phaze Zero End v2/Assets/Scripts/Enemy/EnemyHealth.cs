@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Processors;
 
 public class EnemyHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int health = 20;
+
+    public void TakingDamage(int damage)
     {
-        
+        health -= damage;
+
+        if (health <= 0)
+        {
+            EnemyDeath();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EnemyDeath()
     {
-        
+        Destroy(this.gameObject);
     }
 }
