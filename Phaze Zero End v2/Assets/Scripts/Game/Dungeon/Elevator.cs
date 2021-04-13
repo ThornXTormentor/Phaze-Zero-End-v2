@@ -1,91 +1,81 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Elevator : MonoBehaviour
+namespace Game.Dungeon
 {
-    public GameObject elevator;
-
-    private enum ElevatorStates
+    public class Elevator : MonoBehaviour
     {
-        goingUp,
-        goingDown,
-        stopped
-    };
+        public GameObject elevator;
 
-    private ElevatorStates states;
-
-    public Transform topPos;
-    public Transform bottomPos;
-    private Transform currentPos;
-    public float smoothing = 1.75f;
-
-    private Vector3 newPos;
-    private bool hasPlayer;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        elevator.SetActive(false);
-        states = ElevatorStates.stopped;
-        currentPos = this.transform;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (hasPlayer && currentPos == bottomPos)
+        private enum ElevatorStates
         {
-            states = ElevatorStates.goingUp;
+            goingUp,
+            goingDown,
+            stopped
+        };
+
+        private ElevatorStates states;
+
+        public Transform topPos;
+        public Transform bottomPos;
+        private Transform currentPos;
+        public float smoothing = 1.75f;
+
+        private Vector3 newPos;
+        private bool hasPlayer;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            //elevator.SetActive(true);
+            states = ElevatorStates.stopped;
+            currentPos = bottomPos;
+            this.transform.position = bottomPos.position;
         }
 
-        if (hasPlayer && currentPos == topPos)
+        private void Update()
         {
-            states = ElevatorStates.goingDown;
+            switch (states)
+            {
+                case ElevatorStates.goingUp:
+                    newPos = topPos.position;
+                    this.transform.position = Vector3.Lerp(transform.position, newPos, smoothing * Time.deltaTime);
+                    currentPos = topPos;
+                    break;
+                case ElevatorStates.goingDown:
+                    newPos = bottomPos.position;
+                    this.transform.position = Vector3.Lerp(transform.position, newPos, smoothing * Time.deltaTime);
+                    currentPos = bottomPos;
+                    break;
+                case ElevatorStates.stopped:
+                    break;
+                default:
+                    break;
+                    
+            }
         }
-        
-        FiniteStateChange();
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
+        private void OnTriggerEnter(Collider other)
         {
-            elevator.SetActive(true);
-            other.transform.parent = gameObject.transform;
-            hasPlayer = true;
+            if (other.CompareTag("Player") && currentPos == bottomPos && states == ElevatorStates.stopped)
+            {
+                Debug.Log("player found");
+                states = ElevatorStates.goingUp;
+            }
+            else if (other.CompareTag("Player") && currentPos == topPos && states == ElevatorStates.stopped)
+            {
+                Debug.Log("player found");
+                states = ElevatorStates.goingDown;
+            }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
+        private void OnTriggerExit(Collider other)
         {
-            elevator.SetActive(false);
-            other.transform.parent = null;
-            hasPlayer = false;
-        }
-    }
-
-    public void FiniteStateChange()
-    {
-        if (states == ElevatorStates.goingDown)
-        {
-            newPos = bottomPos.position;
-            transform.position = Vector3.Lerp(transform.position, newPos, smoothing * Time.deltaTime);
-        }
-        
-        if (states == ElevatorStates.goingUp)
-        {
-            newPos = topPos.position;
-            transform.position = Vector3.Lerp(transform.position, newPos, smoothing * Time.deltaTime);
-        }
-        
-        if (states == ElevatorStates.goingDown)
-        {
-            newPos = bottomPos.position;
-            transform.position = Vector3.Lerp(transform.position, newPos, smoothing * Time.deltaTime);
+            if (other.CompareTag("Player") && (currentPos == topPos || currentPos == bottomPos))
+            {
+                Debug.Log("Player left");
+                states = ElevatorStates.stopped;
+            }
         }
         
     }

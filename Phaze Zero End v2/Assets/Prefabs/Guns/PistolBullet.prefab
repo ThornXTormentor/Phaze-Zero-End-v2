@@ -19,7 +19,7 @@ GameObject:
   m_TagString: PistolBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7681451280307619995
 Transform:
@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f4dcedff9d6fd4487fffe0b0cd4e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5

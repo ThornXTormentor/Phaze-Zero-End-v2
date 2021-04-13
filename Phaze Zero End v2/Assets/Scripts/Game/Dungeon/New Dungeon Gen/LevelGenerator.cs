@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
     public Room startRoomPrefab, endRoomPrefab;
 	public List<Room> roomPrefabs = new List<Room> ();
 	public Vector2 iterationRange = new Vector2 (3, 10);
-	//public Player playerPrefab; <-- will be used for VR Rig
+	public GameObject playerPrefab;
 
 	List<Doorway> availableDoorways = new List<Doorway> ();
 
@@ -59,9 +59,9 @@ public class LevelGenerator : MonoBehaviour
 		Debug.Log ("Level generation finished");
 
 		// Place player
-		//player = Instantiate (playerPrefab) as Player;
-		//player.transform.position = startRoom.playerStart.position;
-		//player.transform.rotation = startRoom.playerStart.rotation;
+		playerPrefab = Instantiate(playerPrefab);
+		playerPrefab.transform.position = startRoom.playerStart.position;
+		playerPrefab.transform.rotation = startRoom.playerStart.rotation;
 
 //		yield return new WaitForSeconds (3);
 //		ResetLevelGenerator ();
@@ -114,7 +114,7 @@ public class LevelGenerator : MonoBehaviour
 
 				// Check room overlaps
 				if (CheckRoomOverlap (currentRoom)) {
-					continue;
+					break;
 				}
 
 				roomPlaced = true;
@@ -176,7 +176,7 @@ public class LevelGenerator : MonoBehaviour
 				if (c.transform.parent.gameObject.Equals (room.gameObject)) {
 					continue;
 				} else {
-					Debug.LogError ("Overlap detected");
+					Debug.LogError("Overlap detected");
 					return true;
 				}
 			}
@@ -205,7 +205,7 @@ public class LevelGenerator : MonoBehaviour
 
 			// Check room overlaps
 			if (CheckRoomOverlap (endRoom)) {
-				continue;
+				break;
 			}
 
 			roomPlaced = true;
