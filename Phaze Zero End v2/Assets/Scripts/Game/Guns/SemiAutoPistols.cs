@@ -71,7 +71,7 @@ public class SemiAutoPistols : MonoBehaviour
         spawnedBullet.GetComponent<Rigidbody>().velocity = bulletSpeed * barrel.forward;
         muzzleFlash.Play();
         audioSource.PlayOneShot(pistolShotAudio);
-        Destroy(spawnedBullet, 2);
+        Destroy(spawnedBullet, 3);
 
         if (pistolMagazine.numberOfBullets == 0)
         {

@@ -4324,6 +4324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
+  ammoDrop: {fileID: 0}
+  healthDrop: {fileID: 0}
 --- !u!114 &8228895349806916339
 MonoBehaviour:
   m_ObjectHideFlags: 0

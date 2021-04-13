@@ -8,6 +8,8 @@ TagManager:
   - SemiAutoRifleMag
   - PistolBullet
   - RifleBullet
+  - Rifle
+  - Pistol
   layers:
   - Default
   - TransparentFX

@@ -65,9 +65,10 @@ public class SemiAutoRifle : MonoBehaviour
         rifleMagazine.numberOfBullets--;
         GameObject spawnedBullet = Instantiate(bulletObj, barrelLocation.position, barrelLocation.rotation);
         spawnedBullet.GetComponent<Rigidbody>().velocity = bulletSpeed * barrelLocation.forward;
+        Debug.Log("Fired Rifle");
         muzzleFlash.Play();
         audioSource.PlayOneShot(pistolShotAudio);
-        Destroy(spawnedBullet, 2);
+        Destroy(spawnedBullet, 3);
 
         if (rifleMagazine.numberOfBullets == 0)
         {

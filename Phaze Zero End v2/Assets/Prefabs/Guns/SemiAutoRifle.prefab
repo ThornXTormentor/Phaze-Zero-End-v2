@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d823bad858175742a218aad241182f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrelLocation: {fileID: 0}
+  barrelLocation: {fileID: 3907591905164715494}
   rifleMagazine: {fileID: 0}
   socketInteractor: {fileID: 3907591904317600422}
   muzzleFlash: {fileID: 0}
@@ -645,7 +645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3907591905164715493}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0.274, z: 2.267}
+  m_LocalPosition: {x: -0, y: 0.274, z: 2.365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2962352226912576367}
