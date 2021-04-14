@@ -41,7 +41,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Idle (1)
+      name: Armature|Idle
       takeName: Armature|Idle
       internalID: 0
       firstFrame: 0
@@ -52,7 +52,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -70,11 +70,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Idle
-      takeName: Armature|Idle
+      name: Armature|ActiveDrone.002
+      takeName: Armature|ActiveDrone.002
       internalID: 0
       firstFrame: 0
-      lastFrame: 359
+      lastFrame: 238
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

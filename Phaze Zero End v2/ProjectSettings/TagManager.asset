@@ -10,6 +10,10 @@ TagManager:
   - RifleBullet
   - Rifle
   - Pistol
+  - BossRoom
+  - Room
+  - FloatEnemy
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +22,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Enemy
   - GrabInteract
   - Ground
   - PlayerBody

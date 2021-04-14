@@ -8,9 +8,10 @@ public class Bullet : MonoBehaviour
     public int damage = 5;
     private void OnTriggerEnter(Collider other)
     {
-        EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+        var enemyHealth = other.GetComponentInParent<EnemyHealth>();
         if (enemyHealth != null)
         {
+            Debug.Log("enemy hit for " + damage.ToString());
             enemyHealth.TakingDamage(damage);
         }
         

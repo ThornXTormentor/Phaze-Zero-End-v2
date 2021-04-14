@@ -242,17 +242,20 @@ public class PrefabLightmapData : MonoBehaviour
                 {
                     info.lightmapOffsetScale = renderer.lightmapScaleOffset;
 
-                    Texture2D lightmap = LightmapSettings.lightmaps[renderer.lightmapIndex].lightmapColor;
-                    Texture2D lightmapDir = LightmapSettings.lightmaps[renderer.lightmapIndex].lightmapDir;
-                    Texture2D shadowMask = LightmapSettings.lightmaps[renderer.lightmapIndex].shadowMask;
-
-                    info.lightmapIndex = lightmaps.IndexOf(lightmap);
-                    if (info.lightmapIndex == -1)
+                    if (renderer.lightmapIndex >= 0 && LightmapSettings.lightmaps.Length > renderer.lightmapIndex)
                     {
-                        info.lightmapIndex = lightmaps.Count;
-                        lightmaps.Add(lightmap);
-                        lightmapsDir.Add(lightmapDir);
-                        shadowMasks.Add(shadowMask);
+                        Texture2D lightmap = LightmapSettings.lightmaps[renderer.lightmapIndex].lightmapColor;
+                        Texture2D lightmapDir = LightmapSettings.lightmaps[renderer.lightmapIndex].lightmapDir;
+                        Texture2D shadowMask = LightmapSettings.lightmaps[renderer.lightmapIndex].shadowMask;
+
+                        info.lightmapIndex = lightmaps.IndexOf(lightmap);
+                        if (info.lightmapIndex == -1)
+                        {
+                            info.lightmapIndex = lightmaps.Count;
+                            lightmaps.Add(lightmap);
+                            lightmapsDir.Add(lightmapDir);
+                            shadowMasks.Add(shadowMask);
+                        }
                     }
 
                     rendererInfos.Add(info);

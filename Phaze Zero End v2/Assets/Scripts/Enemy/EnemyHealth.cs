@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.Processors;
+using Random = UnityEngine.Random;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         int randomDrop = Random.Range(0, 30);
         if (randomDrop >= 23) Instantiate(healthDrop);
         if (randomDrop >= 10 && randomDrop <= 21) Instantiate(ammoDrop);
+        Debug.Log("enemy killed");
         Destroy(this.gameObject);
     }
 }

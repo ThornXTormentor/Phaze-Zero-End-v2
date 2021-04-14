@@ -10,14 +10,15 @@ public class DrewCannon : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip drewSound;
 
+    public Collider smashCollider;
+
     private GameObject spawnedLazer;
     private bool lazerActive;
     
     // Start is called before the first frame update
     void Start()
     {
-        spawnedLazer = Instantiate(lazerPrefab, firePoint.transform) as GameObject;
-        DisableLazer();
+        
     }
 
     public void Update()
@@ -37,7 +38,7 @@ public class DrewCannon : MonoBehaviour
 
     public void FireLazer()
     {
-        spawnedLazer.SetActive(true);
+        spawnedLazer = Instantiate(lazerPrefab, firePoint.transform.position, firePoint.transform.rotation);
         audioSource.PlayOneShot(drewSound);
         
     }
@@ -47,11 +48,12 @@ public class DrewCannon : MonoBehaviour
         if (firePoint != null)
         {
             spawnedLazer.transform.position = firePoint.transform.position;
+            spawnedLazer.transform.rotation = firePoint.transform.rotation;
         }
     }
 
     public void DisableLazer()
     {
-        spawnedLazer.SetActive(false);
+        Destroy(spawnedLazer);
     }
 }
