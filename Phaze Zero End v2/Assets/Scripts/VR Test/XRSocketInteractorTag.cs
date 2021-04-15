@@ -17,6 +17,14 @@ public class XRSocketInteractorTag : XRSocketInteractor
         {
             targetTag = "SemiAutoRifleMag";
         }
+        else if (this.CompareTag("Rifle"))
+        {
+            targetTag = "Rifle";
+        }
+        else if (this.CompareTag("Pistol"))
+        {
+            targetTag = "Pistol";
+        }
         
         return base.CanSelect(interactable) && interactable.CompareTag(targetTag);
     }

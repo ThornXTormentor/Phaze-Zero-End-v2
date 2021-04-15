@@ -14,7 +14,11 @@ public class Bullet : MonoBehaviour
             Debug.Log("enemy hit for " + damage.ToString());
             enemyHealth.TakingDamage(damage);
         }
+
+        if (!this.CompareTag("Lazer"))
+        {
+            Destroy(this.gameObject);
+        }
         
-        Destroy(this.gameObject);
     }
 }

@@ -54,8 +54,8 @@ MonoBehaviour:
     type: 3}
   barrel: {fileID: 4744031970138913954}
   audioSource: {fileID: 3579087070072496326}
-  pistolShotAudio: {fileID: 0}
-  triggerClickAudio: {fileID: 0}
+  pistolShotAudio: {fileID: 8300000, guid: d4a4f25679403c04ebafa437cfb93d62, type: 3}
+  triggerClickAudio: {fileID: 8300000, guid: aa60ebbea229ff945877bb08de234019, type: 3}
   magazineSlide: {fileID: 0}
   pistolAnimator: {fileID: 0}
   muzzleFlash: {fileID: 4744031971250663820}
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 1312825660919673189}
   m_Layer: 8
   m_Name: SemiAutoPistol
-  m_TagString: Untagged
+  m_TagString: Pistol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

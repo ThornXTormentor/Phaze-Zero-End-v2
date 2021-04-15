@@ -23,9 +23,9 @@ public class EnemyHealth : MonoBehaviour
 
     private void EnemyDeath()
     {
-        int randomDrop = Random.Range(0, 30);
-        if (randomDrop >= 23) Instantiate(healthDrop);
-        if (randomDrop >= 10 && randomDrop <= 21) Instantiate(ammoDrop);
+        //int randomDrop = Random.Range(0, 30);
+        //Instantiate(healthDrop);
+        Instantiate(ammoDrop, this.transform.position, this.transform.rotation);
         Debug.Log("enemy killed");
         Destroy(this.gameObject);
     }

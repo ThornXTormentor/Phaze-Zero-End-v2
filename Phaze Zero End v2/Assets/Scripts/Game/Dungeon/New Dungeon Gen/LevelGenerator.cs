@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
@@ -167,7 +168,8 @@ public class LevelGenerator : MonoBehaviour
 	bool CheckRoomOverlap (Room room)
 	{
 		Bounds bounds = room.RoomBounds;
-		bounds.Expand (-0.1f);
+		bounds.Expand (-4f);
+		
 
 		Collider[] colliders = Physics.OverlapBox (bounds.center, bounds.size / 2, room.transform.rotation, roomLayerMask);
 		if (colliders.Length > 0) {

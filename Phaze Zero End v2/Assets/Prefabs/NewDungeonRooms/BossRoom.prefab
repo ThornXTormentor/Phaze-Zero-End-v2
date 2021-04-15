@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 203754166926668234}
   - component: {fileID: 340559650394816426}
   - component: {fileID: 8387794743797145698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1cade8f9ccae9f45ba6e919d885e4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 0}
+  boss: {fileID: 7114581198317832101, guid: ff7b4629bf0d0ee449155bdbe48bd9b5, type: 3}
   bossPos: {fileID: 2570374325612876130}
   bossAudioSource: {fileID: 667324133410288928}
   warningSound: {fileID: 8300000, guid: 2909ff8ef55f94946aa741a4342099bb, type: 3}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2416854944407930974}
   - component: {fileID: 6357886984993246162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light Probe Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5921618336279623792}
   - component: {fileID: 5921618336279623795}
   - component: {fileID: 5921618336279623794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Doorway1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5921618336453483864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Doorways
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2570374325612876130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boss Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 1175669617765758620}
   - component: {fileID: 667324133410288928}
   - component: {fileID: 532771334293667489}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossRoom
   m_TagString: BossRoom
   m_Icon: {fileID: 0}
@@ -784,6 +784,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 7514106097495368494, guid: daa9d47d1530d1a4c9a074085c1c920b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daa9d47d1530d1a4c9a074085c1c920b, type: 3}
 --- !u!1 &8608330383470802648 stripped
@@ -815,6 +820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoomLightShort2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2804894095578717327, guid: 42d8afa2f87475c48aa99669ba901148,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2804894095578717327, guid: 42d8afa2f87475c48aa99669ba901148,
         type: 3}
@@ -902,6 +912,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomLight
       objectReference: {fileID: 0}
+    - target: {fileID: 8510063810255133974, guid: ba1fda06ce9ddc44db6f904478210896,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 9030281709838026668, guid: ba1fda06ce9ddc44db6f904478210896,
         type: 3}
       propertyPath: m_RootOrder
@@ -982,6 +997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoomLightShort
+      objectReference: {fileID: 0}
+    - target: {fileID: 2804894095578717327, guid: 42d8afa2f87475c48aa99669ba901148,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2804894095578717327, guid: 42d8afa2f87475c48aa99669ba901148,
         type: 3}
@@ -1134,6 +1154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7514106097495368494, guid: daa9d47d1530d1a4c9a074085c1c920b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daa9d47d1530d1a4c9a074085c1c920b, type: 3}
 --- !u!1 &571770487624700798 stripped
@@ -1236,6 +1261,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate2
       objectReference: {fileID: 0}
+    - target: {fileID: 8401782038460801332, guid: 19a8e47c0ecc63e4aa15302fff17b516,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19a8e47c0ecc63e4aa15302fff17b516, type: 3}
 --- !u!23 &2526341457915015345 stripped
@@ -1267,6 +1297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obelisk
+      objectReference: {fileID: 0}
+    - target: {fileID: 603206042677418325, guid: 68b3b69cb263f8e47b73b21e71a1985d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3470156349129250751, guid: 68b3b69cb263f8e47b73b21e71a1985d,
         type: 3}
@@ -1439,6 +1474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crate2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401782038460801332, guid: 19a8e47c0ecc63e4aa15302fff17b516,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19a8e47c0ecc63e4aa15302fff17b516, type: 3}

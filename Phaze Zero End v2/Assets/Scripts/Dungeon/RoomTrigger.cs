@@ -63,20 +63,22 @@ public class RoomTrigger : MonoBehaviour
         {
             GameObject enemy;
 
-            xPos = Random.Range(-3f, 3f);
-            yPos = Random.Range(0.5f, 2f);
-            zPos = Random.Range(-3f, 3f);
+            xPos = Random.Range(-2f, 2f);
+            yPos = 0;
+            zPos = Random.Range(-2f, 2f);
             enemy = enemies[Random.Range(0, enemies.Length)];
 
             if(enemy.CompareTag("Enemy"))
             {
                 Debug.Log("Enemy Spawned");
-                Instantiate(enemy, new Vector3(spawner.transform.position.x + xPos, spawner.transform.position.y + 0.2f, spawner.transform.position.z + zPos), Quaternion.identity);
+                var position = spawner.transform.position;
+                Instantiate(enemy, new Vector3(position.x + xPos, position.y + yPos, position.z + zPos), Quaternion.identity);
             }
             if (enemy.CompareTag("FloatEnemy"))
             {
                 Debug.Log("Float Enemy Spawned");
-                Instantiate(enemy, new Vector3(spawner.transform.position.x + xPos, spawner.transform.position.y + yPos, spawner.transform.position.z + zPos), Quaternion.identity);
+                var position = spawner.transform.position;
+                Instantiate(enemy, new Vector3(position.x + xPos, position.y + yPos, position.z + zPos), Quaternion.identity);
             }
                     
         }
