@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566956960326217624}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8085437126096442239}
@@ -671,37 +671,37 @@ MonoBehaviour:
     lightmapIndex: 0
     lightmapOffsetScale: {x: 0.61736405, y: 0.61736405, z: -0.0014793109, w: -0.0014793109}
   - renderer: {fileID: 4554543312192959882}
-    lightmapIndex: 1
-    lightmapOffsetScale: {x: 0.1193555, y: 0.1193555, z: 0.4074187, w: 0.7093682}
+    lightmapIndex: 0
+    lightmapOffsetScale: {x: 0.1193555, y: 0.1193555, z: 0.85370594, w: 0.67304367}
   - renderer: {fileID: 8052947000500881425}
-    lightmapIndex: 2
-    lightmapOffsetScale: {x: 0.10157783, y: 0.10157783, z: 0.2862951, w: 0.7867389}
+    lightmapIndex: 1
+    lightmapOffsetScale: {x: 0.10157783, y: 0.10157783, z: 0.39842984, w: 0.7691125}
   - renderer: {fileID: 8052946999089651426}
-    lightmapIndex: 2
-    lightmapOffsetScale: {x: 0.10157783, y: 0.10157783, z: 0.52156794, w: 0.7847375}
+    lightmapIndex: 1
+    lightmapOffsetScale: {x: 0.10157783, y: 0.10157783, z: 0.2862951, w: 0.7867389}
   - renderer: {fileID: 2526341457915015345}
     lightmapIndex: 2
-    lightmapOffsetScale: {x: 0.10108161, y: 0.10108161, z: 0.8863119, w: 0.3894421}
+    lightmapOffsetScale: {x: 0.10108161, y: 0.10108161, z: 0.40938437, w: 0.849221}
   - renderer: {fileID: 3424115706851630764}
-    lightmapIndex: 2
-    lightmapOffsetScale: {x: 0.10108161, y: 0.10108161, z: 0.76317376, w: 0.3894421}
-  - renderer: {fileID: 7815454749420230413}
     lightmapIndex: 1
-    lightmapOffsetScale: {x: 0.21058668, y: 0.21058668, z: 0.55948573, w: 0.7915697}
+    lightmapOffsetScale: {x: 0.10108161, y: 0.10108161, z: 0.5168975, w: 0.3894421}
+  - renderer: {fileID: 7815454749420230413}
+    lightmapIndex: 0
+    lightmapOffsetScale: {x: 0.21058668, y: 0.21058668, z: 0.6279201, w: -0.009746118}
   - renderer: {fileID: 2085072389737263787}
     lightmapIndex: 0
-    lightmapOffsetScale: {x: 0.21058668, y: 0.21058668, z: 0.6279201, w: 0.21681638}
+    lightmapOffsetScale: {x: 0.21058668, y: 0.21058668, z: 0.6279201, w: 0.66994137}
   - renderer: {fileID: 5079814817404107179}
     lightmapIndex: 2
-    lightmapOffsetScale: {x: 0.20133427, y: 0.20133427, z: 0.78215474, w: -0.022532765}
+    lightmapOffsetScale: {x: 0.20133427, y: 0.20133427, z: 0.76938266, w: 0.7787831}
   m_Lightmaps:
   - {fileID: 2800000, guid: ac86bb14955ead749afb13d37933742b, type: 3}
-  - {fileID: 2800000, guid: 133d9b1388de72648a42e43a821fdeda, type: 3}
   - {fileID: 2800000, guid: c6df02d79849cda4ea5f060422e0e0a6, type: 3}
+  - {fileID: 2800000, guid: 133d9b1388de72648a42e43a821fdeda, type: 3}
   m_LightmapsDir:
   - {fileID: 2800000, guid: 071f1f8bdfb490d499ef8018e8e7cd90, type: 3}
-  - {fileID: 2800000, guid: 3f7d2e1ef09cffc4cbe0ff2dc1d1281a, type: 3}
   - {fileID: 2800000, guid: ceb6a0e52dbe1eb4a8e4dbd1f25132a6, type: 3}
+  - {fileID: 2800000, guid: 3f7d2e1ef09cffc4cbe0ff2dc1d1281a, type: 3}
   m_ShadowMasks:
   - {fileID: 0}
   - {fileID: 0}
